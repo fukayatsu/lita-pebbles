@@ -24,6 +24,12 @@ module Lita
         response.reply response.matches[0][0]
       end
 
+      route /つらい$/, :tsurai, command: false
+      def tsurai(response)
+        return if rand(2) == 0
+        response.reply "ねな( ˘ω˘)"
+      end
+
       route /\( ?˘ω˘\)\"?/, :suya, command: false # " this comment is workaround for sublime text syntax highlighting
       def suya(response)
         return if rand(2) == 0
