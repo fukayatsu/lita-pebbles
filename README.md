@@ -15,6 +15,16 @@ And then execute:
 ## Usage
 
 ```
+# lita_config.rb (example)
+Lita.configure do |config|
+  config.handlers.schedules.room              = ENV["BOT_ROOM_ID"]
+  config.handlers.schedules.should_sleep_at   = '* * * * * Asia/Tokyo'
+  config.handlers.schedules.should_wake_up_at = '* * * * * Asia/Tokyo'
+end
+```
+
+
+```
 Lita: sudden 突然の死
 Lita: flip foobar
 Lita: omikuji
