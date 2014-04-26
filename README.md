@@ -1,10 +1,10 @@
-# Lita::Pebbles
+# lita-pebbles
 
-TODO: Write a gem description
+A Lita handler for fun :)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your lita's Gemfile:
 
     gem 'lita-pebbles'
 
@@ -12,13 +12,16 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install lita-pebbles
-
 ## Usage
 
-TODO: Write usage instructions here
+```
+Lita: sudden 突然の死
+Lita: flip foobar
+Lita: omikuji
+Lita: misawa
+...
+```
+
 
 ## Contributing
 
