@@ -23,6 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "lita", ">= 2.0"
   spec.add_runtime_dependency 'pebbles-suddenly_death_string', '~> 0.0.4'
   spec.add_runtime_dependency 'flippy', '~> 0.1.2'
+  spec.add_runtime_dependency 'rufus-scheduler', '~> 3.0.7'
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
