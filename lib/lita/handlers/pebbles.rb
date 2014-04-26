@@ -13,7 +13,7 @@ module Lita
       end
 
       route /^flip\s(.*)$/, :flip, command: false,
-        help: { "flip [message]" => "əɓɐssəɯ`" }
+        help: { "flip [message]" => "əɓɐssəɯ" }
       def flip(response)
         response.reply response.matches[0][0].flip
       end
