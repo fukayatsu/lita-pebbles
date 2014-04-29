@@ -12,14 +12,12 @@ module Lita
 
       route /^omikuji/, :omikuji, command: false
       def omikuji(response)
-        seed   = Time.now.strftime('%Y%m%d') + response.user.id
-        random = Random.new(seed.to_i)
-        response.reply sample_omikuji(random)
+        response.reply sample_omikuji
       end
 
     private
 
-      def sample_omikuji(random)
+      def sample_omikuji(random = Random.new)
         lots     = LOTS.keys
         lot      = lots[random.rand(lots.length)]
         messages = LOTS[lot]
