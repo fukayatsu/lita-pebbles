@@ -26,8 +26,14 @@ module Lita
 
       route /つらい$/, :tsurai, command: false
       def tsurai(response)
-        return if rand(2) == 0
+        return if rand(3) == 0
         response.reply "ねな( ˘ω˘)"
+      end
+
+      route /しのう$/, :shino, command: false
+      def shino(response)
+        return if rand(3) == 0
+        response.reply "いきよう( ˘ω˘)"
       end
 
       route /\( ?˘ω˘\)\"?/, :suya, command: false # " this comment is workaround for sublime text syntax highlighting
