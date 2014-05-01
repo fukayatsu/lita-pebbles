@@ -30,6 +30,12 @@ module Lita
         response.reply "ねな( ˘ω˘)"
       end
 
+      route /ねむい$/, :nemui, command: false
+      def nemui(response)
+        return if rand(3) == 0
+        response.reply "ねな( ˘ω˘)"
+      end
+
       route /しのう$/, :shino, command: false
       def shino(response)
         return if rand(3) == 0
