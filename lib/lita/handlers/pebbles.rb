@@ -24,14 +24,8 @@ module Lita
         response.reply response.matches[0][0]
       end
 
-      route /つらい$/, :tsurai, command: false
-      def tsurai(response)
-        return if rand(3) == 0
-        response.reply "ねな( ˘ω˘)"
-      end
-
-      route /ねむい$/, :nemui, command: false
-      def nemui(response)
+      route /(つらい|ねむい)$/, :nena, command: false
+      def nena(response)
         return if rand(3) == 0
         response.reply "ねな( ˘ω˘)"
       end
