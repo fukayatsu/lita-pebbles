@@ -1,3 +1,7 @@
+require "lita"
+require 'lita/ext/message.rb'
+require 'lita/ext/response.rb'
+
 require "lita/pebbles/version"
 require "lita/handlers/pebbles"
 require "lita/handlers/omikuji"

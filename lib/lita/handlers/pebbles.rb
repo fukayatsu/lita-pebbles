@@ -1,4 +1,3 @@
-require "lita"
 require 'flippy'
 require 'pebbles/suddenly_death_string'
 
@@ -39,7 +38,7 @@ module Lita
       route /(はやい|かわいい|#承認)$/, :hokuhoku, command: false
       def hokuhoku(response)
         return if rand(3) == 0
-        response.reply "ﾎｸﾎｸ" #[FIXME] :twitterではリプライじゃなくてエアリプライ（普通のTweet）の方がﾖｻｿｳ
+        response.reply_without_mention "ﾎｸﾎｸ"
       end
 
       route /\( ?˘ω˘\)\"?/, :suya, command: false # " this comment is workaround for sublime text syntax highlighting
