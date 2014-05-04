@@ -37,9 +37,9 @@ module Lita
       end
 
       route /(はやい|かわいい|#承認)$/, :hokuhoku, command: false
-      def shino(response)
+      def hokuhoku(response)
         return if rand(3) == 0
-        response.reply "ﾎｸﾎｸ" #[FIXME] リプライじゃなくてエアリプライ（普通のTweet）の方がﾖｻｿｳなんだけどやり方がわからない ( ˘ω˘)
+        response.reply "ﾎｸﾎｸ" #[FIXME] :twitterではリプライじゃなくてエアリプライ（普通のTweet）の方がﾖｻｿｳ
       end
 
       route /\( ?˘ω˘\)\"?/, :suya, command: false # " this comment is workaround for sublime text syntax highlighting
