@@ -36,7 +36,7 @@ module Lita
         response.reply "いきよう( ˘ω˘)"
       end
 
-      route /(はやい|かわいい)$/, :hokuhoku, command: false
+      route /(はやい|かわいい|#承認)$/, :hokuhoku, command: false
       def shino(response)
         return if rand(3) == 0
         response.reply "ﾎｸﾎｸ" #[FIXME] リプライじゃなくてエアリプライ（普通のTweet）の方がﾖｻｿｳなんだけどやり方がわからない ( ˘ω˘)
