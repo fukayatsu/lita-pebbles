@@ -8,7 +8,7 @@ module Lita
         help: { "sudden [message]" => "＞ message ＜" }
       def suddenly_death(response)
         word = response.matches[0][0]
-        response.reply word.to_suddenly_death
+        response.reply_without_mention word.to_suddenly_death
       end
 
       route /^flip\s(.*)$/, :flip, command: false,
