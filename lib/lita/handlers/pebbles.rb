@@ -17,7 +17,7 @@ module Lita
         response.reply response.matches[0][0].flip
       end
 
-      route /((w|ｗ)+)$/, :lol, command: false
+      route /[^a-zA-Z0-9]((w|ｗ)+)$/, :lol, command: false
       def lol(response)
         return if rand(2) == 0
         response.reply response.matches[0][0]
