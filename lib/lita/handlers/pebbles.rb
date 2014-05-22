@@ -11,6 +11,12 @@ module Lita
         response.reply_without_mention word.to_suddenly_death
       end
 
+      route /^ghost\s+(\S.*)+/, :ghost, command: false
+      def ghost(response)
+        word = response.matches[0][0]
+        response.reply_without_mention word
+      end
+
       route /^flip\s(.*)$/, :flip, command: false,
         help: { "flip [message]" => "əɓɐssəɯ" }
       def flip(response)
