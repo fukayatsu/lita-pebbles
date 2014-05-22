@@ -13,7 +13,7 @@ module Lita
 
       route /^(ghost|echo)\s+(\S.*)+/, :echo, command: false
       def echo(response)
-        word = response.matches[0][0]
+        word = response.matches[0][1]
         response.reply_without_mention word
       end
 
