@@ -11,8 +11,8 @@ module Lita
         response.reply_without_mention word.to_suddenly_death
       end
 
-      route /^ghost\s+(\S.*)+/, :ghost, command: false
-      def ghost(response)
+      route /^(ghost|echo)\s+(\S.*)+/, :echo, command: false
+      def echo(response)
         word = response.matches[0][0]
         response.reply_without_mention word
       end
