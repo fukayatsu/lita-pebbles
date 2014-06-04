@@ -52,6 +52,14 @@ module Lita
         return if rand(2) == 0
         response.reply response.matches[0]
       end
+
+      route /^tori\s+(\S.*)+/, :tori, command: false,
+        help: { "tori [message]" => "( ⁰⊖⁰)/)[ message ]/)" }
+      def tori(response)
+        word = response.matches[0][0]
+        response.reply_without_mention "( ⁰⊖⁰)/)[ #{word} ]/)"
+      end
+
     end
     Lita.register_handler(Pebbles)
   end
