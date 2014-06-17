@@ -60,6 +60,12 @@ module Lita
         response.reply_without_mention "( ⁰⊖⁰)/)[ #{word} ]/)"
       end
 
+      route /(やぁ|やあ|ヤア|ヤァ)(!|！)?/, :yah_yah, command: true
+      def yah_yah(response)
+        yah = response.matches[0]
+        response.reply "#{yah[0]}#{yah[1]}" * (response.matches.length + 1)
+      end
+
     end
     Lita.register_handler(Pebbles)
   end
