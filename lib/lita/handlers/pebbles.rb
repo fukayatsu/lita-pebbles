@@ -35,7 +35,7 @@ module Lita
         response.reply "いきよう( ˘ω˘)"
       end
 
-      route /(はやい|かわいい|#承認)$/, :hokuhoku, command: false
+      route /(はやい|かわいい|#承認|いぬよ|いぬ)$/, :hokuhoku, command: false
       def hokuhoku(response)
         return if rand(3) == 0
         response.reply_without_mention "ﾎｸﾎｸ"
