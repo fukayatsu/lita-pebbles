@@ -23,19 +23,25 @@ module Lita
         response.reply response.matches[0][0].flip
       end
 
+      route /[^a-zA-Z0-9]((w|ｗ)+)$/, :lol, command: false
+      def lol(response)
+        return if rand(2) == 0
+        response.reply response.matches[0][0]
+      end
+
       route /(つらい|ねむい)$/, :nena, command: false
       def nena(response)
         return if rand(3) == 0
-        response.reply "ねな U ˘ω˘)"
+        response.reply "ねな( ˘ω˘)"
       end
 
       route /しのう$/, :shino, command: false
       def shino(response)
         return if rand(3) == 0
-        response.reply "いきよう U ˘ω˘)"
+        response.reply "いきよう( ˘ω˘)"
       end
 
-      route /(はやい|かわいい|#承認|いぬよ|いぬ)$/, :hokuhoku, command: false
+      route /(はやい|かわいい|#承認)$/, :hokuhoku, command: false
       def hokuhoku(response)
         return if rand(3) == 0
         response.reply_without_mention "ﾎｸﾎｸ"
