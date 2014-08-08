@@ -26,13 +26,13 @@ module Lita
       route /(つらい|ねむい)$/, :nena, command: false
       def nena(response)
         return if rand(3) == 0
-        response.reply "ねな( ˘ω˘)"
+        response.reply "ねな U ˘ω˘)"
       end
 
       route /しのう$/, :shino, command: false
       def shino(response)
         return if rand(3) == 0
-        response.reply "いきよう( ˘ω˘)"
+        response.reply "いきよう U ˘ω˘)"
       end
 
       route /(はやい|かわいい|#承認|いぬよ|いぬ)$/, :hokuhoku, command: false
