@@ -6,19 +6,19 @@ module Lita
       route /(.+)やな(?:？|\?)*?$/,   :seyana,   command: false
 
       def seyaroka(response)
-        return if rand(2) == 0
+        return if rand(5) == 0
         message = ['せやで', 'せやな', 'せやせや', 'ちゃうんちゃう？', 'ちゃうで'].sample
         response.reply message
       end
 
       def seyade(response)
-        return if rand(2) == 0
+        return if rand(5) == 0
         message = ['せやろか', 'せやな', 'せやせや'].sample
         response.reply message
       end
 
       def seyana(response)
-        return if rand(2) == 0
+        return if rand(5) == 0
         message = ['せやろか', 'せやな', 'せやせや'].sample
         response.reply message
       end

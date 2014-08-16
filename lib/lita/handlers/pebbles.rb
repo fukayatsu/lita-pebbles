@@ -25,7 +25,7 @@ module Lita
 
       route /[^a-zA-Z0-9]((w|ｗ)+)$/, :lol, command: false
       def lol(response)
-        return if rand(2) == 0
+        return if rand(3) == 0
         response.reply response.matches[0][0]
       end
 
@@ -49,7 +49,7 @@ module Lita
 
       route /\( ?˘ω˘\)\"?/, :suya, command: false # " this comment is workaround for sublime text syntax highlighting
       def suya(response)
-        return if rand(2) == 0
+        return if rand(3) == 0
         response.reply response.matches[0]
       end
 
