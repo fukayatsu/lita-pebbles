@@ -47,8 +47,14 @@ module Lita
         response.reply_without_mention "ﾎｸﾎｸ"
       end
 
-      route /\( ?˘ω˘\)\"?/, :suya, command: false # " this comment is workaround for sublime text syntax highlighting
+      route /\( ?˘ω˘\)\"?/, :suya, command: false
       def suya(response)
+        return if rand(3) == 0
+        response.reply response.matches[0]
+      end
+
+      route /(?:=͟͟͞͞ )?"?\(\\{1,2}\( ⁰⊖⁰\)\/\)"?/, :bird, command: false
+      def bird(response)
         return if rand(3) == 0
         response.reply response.matches[0]
       end
