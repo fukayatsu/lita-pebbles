@@ -5,6 +5,7 @@ require 'lita/ext/response.rb'
 require "lita/pebbles/version"
 require "lita/handlers/pebbles"
 require "lita/handlers/omikuji"
+require "lita/handlers/sample"
 require "lita/handlers/kansai"
 require "lita/handlers/misawa"
 require "lita/handlers/schedules"
