@@ -3,11 +3,9 @@ require 'rufus-scheduler'
 module Lita
   module Handlers
     class Schedules < Handler
-      def self.default_config(handler_config)
-        handler_config.room              = nil
-        handler_config.should_sleep_at   = nil
-        handler_config.should_wake_up_at = nil
-      end
+      config :room,              default: nil
+      config :should_sleep_at,   default: nil
+      config :should_wake_up_at, default: nil
 
       on :loaded, :init_scheduler
       def init_scheduler(payload)
@@ -50,6 +48,7 @@ module Lita
       end
 
       private
+
       def config
         Lita.config.handlers.schedules
       end
