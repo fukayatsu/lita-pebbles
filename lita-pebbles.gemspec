@@ -20,12 +20,12 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "lita", ">= 3.1"
-  spec.add_runtime_dependency 'pebbles-suddenly_death_string', '~> 0.0.4'
-  spec.add_runtime_dependency 'flippy', '~> 0.1.2'
-  spec.add_runtime_dependency 'rufus-scheduler', '~> 3.0.7'
+  spec.add_runtime_dependency "lita", ">= 4.0"
+  spec.add_runtime_dependency 'pebbles-suddenly_death_string'
+  spec.add_runtime_dependency 'flippy'
+  spec.add_runtime_dependency 'rufus-scheduler'
 
-  spec.add_development_dependency "bundler", "~> 1.5"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "pry"
 end
