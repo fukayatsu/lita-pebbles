@@ -1,3 +1,5 @@
+require 'securerandom'
+
 module Lita
   module Handlers
     class Sample < Handler
@@ -7,7 +9,7 @@ module Lita
       def sample(response)
         total, list = response.matches.flatten
         total ||= 1
-        list = list.split.shuffle
+        list = list.split.shuffle(random: SecureRandom)
 
         total.to_i.times do
           item = list.pop
